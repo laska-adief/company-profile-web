@@ -1,0 +1,30 @@
+<div class="core-value">
+  <div class="container">
+    <div class="heading text-center mb-4">
+      Our Core Values
+    </div>
+    <div class="sub-heading">
+      <div class="sub1">
+        Ridiculus laoreet libero pretium et, sit vel elementum convallis fames. Sit suspendisse etiam eget egestas.
+        Aliquet odio et lectus etiam sit.
+      </div>
+      <div class="sub2 mt-4">
+        In mauris rutrum ac ut volutpat, ornare nibh diam. Montes, vitae, nec amet enim.
+      </div>
+    </div>
+    <div class="content">
+      <div class="value-container">
+        <div class="value" *ngFor="let value of values">
+          <span class="value-list"><img src="./assets/img/list.svg" alt="list"></span>
+          <div class="value-content">
+            <div class="title">{{value.title}}</div>
+            <div class="text">{{value.text}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="value-img">
+        <img src="./assets/img/core-values-illustration.svg" alt="core-values-illustration">
+      </div>
+    </div>
+  </div>
+</div>

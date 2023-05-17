@@ -1,0 +1,37 @@
+<nav>
+  <div class="navbar">
+    <div class="brand">
+      <a href="#home">
+        <img src="./assets/img/logo.svg" alt="logo">
+      </a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="menu-mobile">
+      <img src="./assets/img/burger.svg" alt="bars" (click)="openMenuMobile()">
+      <div class="menu-link-mobile" *ngIf="isOpenMenuMobile">
+        <div class="close-button" (click)="openMenuMobile()">
+          X
+        </div>
+        <ul>
+          <li (click)="openMenuMobile()"><a href="#home">Home</a></li>
+          <li (click)="openMenuMobile()"><a href="#who-we-are">Who We Are</a></li>
+          <li (click)="openMenuMobile()"><a href="#values">Our Values</a></li>
+          <li (click)="openMenuMobile()"><a href="#speciality">Speciality</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="menu-desktop">
+      <div class="menu-link">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#who-we-are">Who We Are</a></li>
+          <li><a href="#values">Values</a></li>
+          <li><a href="#speciality">Speciality</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,35 @@
+<div class="who-we-are">
+  <div class="container">
+
+    <!-- Mobile Mode -->
+    <div class="mobile-slider">
+      <div class="slider" *ngFor="let slide of slides">
+        <ng-container *ngIf="slide.id === slideActive">
+          <div class="title">{{slide.title}}</div>
+          <div class="subtitle">{{slide.subtitle}}</div>
+          <div class="content">{{slide.content}}</div>
+          <div class="slider-footer">
+            <div class="number">
+              <span class="number-slide"><span *ngIf="slide.id < 10">0</span>{{slide.id}}</span>
+              <span class="number-slash"> / </span>
+              <span class="number-total-slide">{{totalSlide}}</span>
+            </div>
+            <div class="arrows">
+              <div class="arrow left" (click)="prevSlide()">←</div>
+              <div class="arrow right" (click)="nextSlide()">→</div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- Desktop Mode -->
+    <div class="desktop-slider">
+      <div class="slider" *ngFor="let slide of slides">
+        <div class="title">{{slide.title}}</div>
+        <div class="subtitle">{{slide.subtitle}}</div>
+        <div class="content">{{slide.content}}</div>
+      </div>
+    </div>
+  </div>
+</div>

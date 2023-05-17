@@ -1,0 +1,44 @@
+<div class="speciality">
+  <div class="container">
+    <div class="heading">OUR SPECIALITY</div>
+    <div class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod libero vel leo
+      auctor, in venenatis nulla consequat. Sed commodo nunc sit amet congue aliquam.
+    </div>
+
+    <!-- Mobile Mode -->
+    <div class="mobile-slider">
+      <div class="slider text-center" *ngFor="let slide of slides">
+        <ng-container *ngIf="slide.id === slideActive">
+          <div class="image">
+            <img [src]="slide.image" [alt]="slide.title">
+          </div>
+          <div class="title">{{slide.title}}</div>
+          <div class="content">{{slide.content}}</div>
+          <div class="slider-footer">
+            <div class="arrow left" (click)="prevSlide()">←</div>
+            <div class="bulletin-slider">
+              <span *ngFor="let item of slides">
+                <img *ngIf="item.id === slideActive" src="./assets/img/blank-bullet.svg" alt="blank-bullet"
+                  (click)="moveSlide(item.id)">
+                <img *ngIf="item.id !== slideActive" src="./assets/img/fill-bullet.svg" alt="fill-bullet"
+                  (click)="moveSlide(item.id)">
+              </span>
+            </div>
+            <div class="arrow right" (click)="nextSlide()">→</div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- Desktop Mode -->
+    <div class="desktop-slider">
+      <div class="slider text-center" *ngFor="let slide of slides">
+        <div class="image">
+          <img [src]="slide.image" [alt]="slide.title">
+        </div>
+        <div class="title">{{slide.title}}</div>
+        <div class="content">{{slide.content}}</div>
+      </div>
+    </div>
+  </div>
+</div>

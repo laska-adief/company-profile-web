@@ -1,0 +1,25 @@
+<footer>
+  <div class="container">
+    <div class="brand">
+      <img src="./assets/img/logo-white.svg" alt="">
+    </div>
+  </div>
+  <div class="footer-container">
+    <div class="department-list">
+      <select [(ngModel)]="selectedDepartment">
+        <option *ngFor="let dept of departmentList" [value]="dept.address">
+          {{dept.name}}</option>
+      </select>
+      <div class="address">
+        {{selectedDepartment}}
+      </div>
+    </div>
+    <div class="menu-link">
+      <ul>
+        <li><a href="#who-we-are">Who We Are</a></li>
+        <li><a href="#values">Our Values</a></li>
+        <li><a href="#speciality">The Perks</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

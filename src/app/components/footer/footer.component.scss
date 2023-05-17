@@ -1,0 +1,72 @@
+footer {
+  background: #07477A;
+  padding: 24px 0 0 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.brand {
+  margin-bottom: 24px;
+}
+
+.department-list {
+  background: #FFF;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+
+  select {
+    width: 100%;
+    border: 1px solid #0000004D;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #00537C;
+    margin-bottom: 24px;
+  }
+
+  .address {
+    font-size: 18px;
+    color: #25A0D8;
+  }
+}
+
+.menu-link {
+  margin-top: 34px;
+  background: url('./../../../assets/img/background-footer.svg') no-repeat;
+  background-size: cover;
+  & ul {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  & li {
+    cursor: pointer;
+    color: #FFF;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width:1024px) {
+  .footer-container {
+    display: flex;
+    padding-bottom: 24px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .department-list {
+    width: 60%;
+  }
+
+  .menu-link {
+    background: initial;
+    width: 40%;
+    margin-top: initial;
+  }
+  
+}
